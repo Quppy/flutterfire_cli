@@ -224,7 +224,7 @@ String androidAppBuildGradlePathForAppDirectory(Directory directory) {
 File xcodeProjectFileInDirectory(Directory directory, String platform) {
   return File(
     joinAll(
-      [directory.path, platform, 'Runner.xcodeproj', 'project.pbxproj'],
+      [directory.path, platform, 'Quppy.xcodeproj', 'project.pbxproj'],
     ),
   );
 }
@@ -232,7 +232,7 @@ File xcodeProjectFileInDirectory(Directory directory, String platform) {
 File xcodeAppInfoConfigFileInDirectory(Directory directory, String platform) {
   return File(
     joinAll(
-      [directory.path, platform, 'Runner', 'Configs', 'AppInfo.xcconfig'],
+      [directory.path, platform, 'Quppy', 'Configs', 'AppInfo.xcconfig'],
     ),
   );
 }
@@ -502,7 +502,7 @@ String getXcodeProjectPath(String platform) {
   return join(
     Directory.current.path,
     platform,
-    'Runner.xcodeproj',
+    'Quppy.xcodeproj',
   );
 }
 

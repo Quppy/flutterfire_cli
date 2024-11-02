@@ -44,7 +44,7 @@ Future<FirebaseJsonWrites> appleWrites({
         platform: platform,
         projectConfiguration: projectConfiguration,
         target: ProjectConfiguration.defaultConfig == projectConfiguration
-            ? 'Runner'
+            ? 'Quppy'
             : target!,
       ).apply();
   }
@@ -68,7 +68,7 @@ class FirebaseAppleTargetConfiguration extends FirebaseAppleConfiguration {
           projectConfiguration: projectConfiguration,
         );
 
-  // Default Flutter project has the target name "Runner"
+  // Default Flutter project has the target name "Quppy"
   final String target;
 
   Future<void> _writeGoogleServiceFileToTargetProject() async {
@@ -203,7 +203,7 @@ $command
 )
 
 for target in project.targets 
-  if (target.name == 'Runner')
+  if (target.name == 'Quppy')
     phase = target.shell_script_build_phases().find do |item|
       if defined? item && item.name
         item.name == runScriptName
@@ -301,7 +301,7 @@ abstract class FirebaseAppleConfiguration {
 }
 
 Future<bool> addFlutterFireDebugSymbolsScript({
-  String target = 'Runner',
+  String target = 'Quppy',
   required String flutterAppPath,
   required Logger logger,
   required String platform,
@@ -368,7 +368,7 @@ Future<bool> addFlutterFireDebugSymbolsScript({
 }
 
 String _debugSymbolsScript(
-  // Always "Runner" for "build configuration" setup
+  // Always "Quppy" for "build configuration" setup
   String target,
   ProjectConfiguration projectConfiguration,
   String platform,

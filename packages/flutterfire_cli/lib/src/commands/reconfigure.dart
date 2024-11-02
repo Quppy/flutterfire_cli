@@ -206,7 +206,7 @@ class Reconfigure extends FlutterFireCommand {
           ),
           platform,
         ),
-        '$platform "$appleServiceFileName" file write for default target (Runner)',
+        '$platform "$appleServiceFileName" file write for default target (Quppy)',
       );
     }
     final targetMapKeys = [

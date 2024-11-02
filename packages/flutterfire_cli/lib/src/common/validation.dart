@@ -24,11 +24,11 @@ Future<AppleInputs> appleValidation({
     // Default configuration
     return AppleInputs(
       projectConfiguration: configurationResponse,
-      target: 'Runner',
+      target: 'Quppy',
       serviceFilePath: path.join(
         Directory.current.path,
         platform,
-        'Runner',
+        'Quppy',
         appleServiceFileName,
       ),
     );
